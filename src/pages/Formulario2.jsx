@@ -19,22 +19,6 @@ const Formulario2 = () => {
 
   return (
     <>
-      <header>
-        <div className="logo">
-          <img src="/img/logo.png" alt="AdoptMe Logo" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/adopcion">Adoptar</a></li>
-            <li><a href="/comoadoptar">¿Cómo Adoptar?</a></li>
-            <li><a href="/donar">Donar</a></li>
-            <li><a href="/entregables">Entregables</a></li>
-          </ul>
-        </nav>
-        <button className="btn" onClick={() => alert('Abrir modal de inicio de sesión')}>Iniciar Sesión</button>
-      </header>
-
       <section className="form-section">
         <h1>🐾 <span>Formulario de Publicación De Mascota</span> 🐾</h1>
         <p className="subtitulo">🐾 Comparte la historia de tu mascota y ayúdala a encontrar un hogar amoroso 💕</p>
@@ -160,9 +144,63 @@ const Formulario2 = () => {
             <label htmlFor="video_mascota">Elegir Archivo</label>
             <span>{fileNameVideo}</span>
           </div>
+          <div>
+          <img src="../img/Gaticueva3.png" alt="Imagen central"></img>
+          </div>
+          <h2>📌 Confirmaciones y Condiciones</h2>
 
-          <button type="submit" className="btn">Enviar Solicitud</button>
+            <label for="condiciones">¿Estás de acuerdo con estas condiciones?</label>
+            <select id="condiciones" name="condiciones" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="requisito_adoptante">¿Tienes algún requisito especial para el adoptante?</label>
+            <select id="requisito_adoptante" name="requisito_adoptante" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="visita_validacion">¿Estás dispuesto/a a hacer una visita o videollamada para validar el hogar del adoptante?</label>
+            <select id="visita_validacion" name="visita_validacion" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="verificacion_adoptme">¿Estás de acuerdo en que AdoptMe haga un proceso de verificación antes de publicar la mascota?</label>
+            <select id="verificacion_adoptme" name="verificacion_adoptme" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <h2>📌 Confirmación Final</h2>
+
+<label className="checkbox-label">
+  <input type="checkbox" name="confirmacion_veracidad" required />
+  Declaro que toda la información proporcionada es verdadera y que soy el responsable legítimo de esta mascota.
+</label>
+
+<label className="checkbox-label">
+  <input type="checkbox" name="confirmacion_pago" required />
+  Me comprometo a no solicitar ningún pago o beneficio económico por la adopción de esta mascota.
+</label>
+
+<label className="checkbox-label">
+  <input type="checkbox" name="confirmacion_verificacion" required />
+  Acepto que AdoptMe realice un proceso de verificación antes de publicar la mascota.
+</label>
+
+<div className="botones">
+  <button type="reset" className="btn-limpiar">Limpiar</button>
+  <button type="submit" className="btn-enviar">Enviar</button>
+</div>
         </form>
+        <div>
+      <img src="../img/Gaticueva2.png" alt="Imagen central"></img>
+      </div>
       </section>
     </>
   );

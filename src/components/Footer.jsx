@@ -11,7 +11,7 @@ function Footer() {
             seguras y responsables para que encuentres un hogar lleno de amor.
           </p>
           <p>📧 Adoptme@gmail.com</p>
-          <p>📞 +57 321 564 8789</p>
+          <p>📞 +57 302 452 9227</p>
           <div className="social-icons">
             <a href="https://www.facebook.com/share/1C9GbksDEm/">
               <img src="../img/FacebookLogo.png" alt="Facebook" />

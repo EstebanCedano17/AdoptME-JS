@@ -165,8 +165,39 @@ export default function Formulario() {
           <option value="no">No</option>
         </select>
 
-        <button className="btn" type="submit">Enviar Solicitud</button>
+        <h2>📌 Adjuntar Documentos</h2>
+
+<div className="adjuntar-documentos">
+  <label htmlFor="doc-identidad">📄 Documento de Identidad (Formato: JPG, PNG, PDF)</label>
+  <input type="file" id="doc-identidad" name="doc-identidad" accept=".jpg, .jpeg, .png, .pdf" required />
+
+  <label htmlFor="doc-residencia">🏠 Prueba de Residencia (Ejemplo: Recibo de servicios públicos)</label>
+  <input type="file" id="doc-residencia" name="doc-residencia" accept=".jpg, .jpeg, .png, .pdf" required />
+</div>
+       
+<>
+      <h2>📌 Confirmación Final</h2>
+
+      <form id="formularioAdopcion" onSubmit={handleSubmit}>
+        <div className="confirmacion-final">
+          <label className="checkbox-label">
+            <input type="checkbox" id="confirmacion" required />
+            <span>
+              Declaro que toda la información proporcionada es verdadera y acepto el proceso de adopción.
+            </span>
+          </label>
+        </div>
+
+        <div className="botones">
+          <button type="reset" className="btn-limpiar">Limpiar</button>
+          <button type="submit" className="btn-enviar">Enviar</button>
+        </div>
       </form>
+    </>
+      </form>
+      <div>
+      <img src="../img/Gaticueva2.png" alt="Imagen central"></img>
+      </div>
     </div>
-  );
+  ); 
 }

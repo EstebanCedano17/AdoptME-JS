@@ -37,7 +37,7 @@ function App() {
         />
         <Route path="/adoptar" element={<Adoptar />} />
         <Route path="/formulario" element={<Formulario />} />
-        <Route path="/formulario2" element={<Formulario />} />
+        <Route path="/formulario2" element={<Formulario2 />} />
         <Route path="/comoadoptar" element={<ComoAdoptar />} />
         <Route path="/mascota" element={<Mascota />} /> {/* Asegúrate de que la ruta sea correcta */}
       </Routes>
